@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        *{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .formstyle{
+            margin: auto;
+            padding: auto;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 325px;
+            background-color: #212529;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #clear{
+            width: 100px;
+            font-style: italic;
+            font-size: 21px;
+            font-weight: bolder;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: #6A040F;
+            color: #F1FAEE;
+        }
+        #del{
+            margin-left:105px;
+            height: 40px;
+            width: 100px;
+            font-size: large;
+            color: #F1FAEE;
+            background-color: #9D0208;
+            border-radius: 10px;
+            border-style:solid;
+            border-color: white;
+        }
+        input{
+            height: 40px;
+            width: 100px;
+            font-size: large;
+            color: #F1FAEE;
+            background-color: #1D3557;
+            border-radius: 10px;
+            border-style:solid;
+            border-color: white;
+           
+        }
+        #ans{
+            height: 70px;
+            width: 300px;
+            font-size: x-large;
+            color: #03045e;
+            border-style:solid;
+            border-color: white;
+            background-color: #90e0ef;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="formstyle">
+    <form name="form">
+        <input type="text" name="answer" id="ans"><br></br><br>
+        <input type="button" value="Clear All" onclick="answer.value =''" id="clear">
+        <input type="button" value="⌫" id="del" onclick='answer.value = answer.value.slice(0, -1)'>
+        <br></br>
+
+        <input type="button" value="7" onclick="answer.value += '7' ">
+        <input type="button" value="8" onclick="answer.value += '8' ">
+        <input type="button" value="9" onclick="answer.value += '9' ">
+        
+        <br></br>
+        
+        <input type="button" value="4" onclick="answer.value += '4' ">
+        <input type="button" value="5" onclick="answer.value += '5' ">
+        <input type="button" value="6" onclick="answer.value += '6' ">
+        
+        <br></br>
+        
+        <input type="button" value="1" onclick="answer.value += '1' ">
+        <input type="button" value="2" onclick="answer.value += '2' ">
+        <input type="button" value="3" onclick="answer.value += '3' ">
+        
+        <br></br>
+        
+        <input type="button" value="+" onclick="answer.value += '+' ">
+        <input type="button" value="0" onclick="answer.value += '0' ">
+        <input type="button" value="-" onclick="answer.value += '-' ">
+        
+        <br></br>
+
+        <input type="button" value="*" onclick="answer.value += '*' ">        
+        <input type="button" value="/" onclick="answer.value += '/' ">
+        <input type="button" value="=" onclick="answer.value = eval(form.answer.value) ">
+    </form>
+    </div>
+</body>
+</html>
